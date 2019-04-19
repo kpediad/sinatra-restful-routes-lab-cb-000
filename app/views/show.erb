@@ -1,0 +1,10 @@
+<h1><%=@recipe.name%></h1>
+<p>Ingredients: <%=@recipe.ingredients%></p>
+<br>
+<p>Cook Time: <%=@recipe.cook_time%></p>
+<form action="/recipes/<%=@recipe.id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input id="submit" type="submit" name="submit" value="delete">
+</form>
+<button onclick="window.location.href = '/recipes/<%=@recipe.id%>/edit';">Edit</button>
+<button onclick="window.location.href = '/recipes';">Index</button>
