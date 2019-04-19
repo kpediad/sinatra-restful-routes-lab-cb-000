@@ -1,4 +1,4 @@
-Recipeclass ApplicationController < Sinatra::Base
+class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
@@ -43,4 +43,5 @@ Recipeclass ApplicationController < Sinatra::Base
     Recipe.delete(params[:id])
     redirect '/recipes'
   end
+  
 end
